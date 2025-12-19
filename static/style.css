@@ -1,0 +1,198 @@
+:root {
+  --azul-principal: #0059b3;
+  --azul-escuro: #003366;
+  --azul-claro: #e6f0ff;
+  --branco: #ffffff;
+  --cinza-texto: #333;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  background: var(--azul-claro);
+  color: var(--cinza-texto);
+}
+
+
+header {
+  background: linear-gradient(90deg, var(--azul-escuro), var(--azul-principal));
+  color: var(--branco);
+  padding: 15px 25px;
+}
+
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 45px;
+}
+
+.menu a {
+  color: var(--branco);
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #cce0ff;
+}
+
+
+main {
+  padding: 30px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.card {
+  background: var(--branco);
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  color: var(--azul-principal);
+}
+
+.card ul {
+  margin-left: 20px;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+
+.galeria {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
+}
+
+
+.galeria img {
+width: 100%;
+height: 300px;
+object-fit: cover;
+border-radius: 12px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+.galeria img:hover {
+transform: scale(1.03);
+box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+}
+
+form.card {
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+  color: var(--azul-escuro);
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  outline: none;
+  border-color: var(--azul-principal);
+  box-shadow: 0 0 0 2px rgba(0, 89, 179, 0.2);
+}
+
+button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px;
+  background: linear-gradient(90deg, var(--azul-principal), var(--azul-escuro));
+  color: var(--branco);
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: var(--azul-escuro);
+  color: var(--branco);
+}
+
+
+@media (max-width: 768px) {
+  .menu {
+    width: 100%;
+    margin-top: 10px;
+    text-align: right;
+  }
+}
+
+@media (max-width: 480px) {
+  .topo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    text-align: left;
+  }
+
+  .menu a {
+    display: block;
+    margin: 8px 0;
+  }
+}

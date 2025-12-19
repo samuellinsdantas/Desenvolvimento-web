@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abrir Chamado | IFPB</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+    <header class="topo">
+        <div class="logo-area">
+            <img src="img/if-logo.png" alt="IFPB" class="logo">
+            <h1>Serviço de Hardware - IFPB</h1>
+        </div>
+        <nav class="menu">
+            <a href="index.html">Início</a>
+            <a href="servico.html">Serviços</a>
+            <a href="chamado.html">Chamado</a>
+        </nav>
+    </header>
+
+
+    <main>
+        <form class="card">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+
+            <label for="email">Email para contato:</label>
+            <input type="email" name="email" id="email" placeholder="seuemail@gmail.com" required>
+
+            <label for="servico">Selecione o Serviço:</label>
+            <select name="servico" id="servico" required>
+                <option value="">Escolha</option>
+                <option>Manutenção</option>
+                <option>Instalação de Sistema</option>
+                <option>Troca de Peças</option>
+                <option>Limpeza Preventiva</option>
+            </select>
+
+            <label for="problema">Descreva o problema:</label>
+            <textarea name="problema" id="problema" rows="5" placeholder="Explique o problema encontrado" required></textarea>
+
+            <button type="submit">Enviar Chamado</button>
+        </form>
+    </main>
+
+
+
+    <footer>
+        <p>© 2025 - Instituto Federal da Paraíba</p>
+    </footer>
+</body>
+
+</html>
