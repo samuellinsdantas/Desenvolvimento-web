@@ -21,3 +21,6 @@ Projeto desenvolvido para fins educacionais utilizando HTML e CSS.
 - Isaac
 - Camila
 - Samuel
+
+## Site disponível em:
+- https://samuellinsdantas.github.io/Desenvolvimento-web/
