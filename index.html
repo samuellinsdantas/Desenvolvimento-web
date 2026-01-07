@@ -5,22 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serviço de Hardware | IFPB</title>
-    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="./static/style.css">
 </head>
 
 <body>
     <header class="topo">
         <div class="logo-area">
             <img src="img/if-logo.png" alt="IFPB" class="logo">
-            <h1>Serviço de Hardware - IFPB</h1>
+            <h1>InfoTech IFPB</h1>
         </div>
         <nav class="menu">
+            <a href="index.html">Início</a>
             <a href="servico.html">Serviços</a>
             <a href="chamado.html">Chamado</a>
             <a href="loja.html">Loja</a>
+            <span class="carrinho">🛒 Carrinho (0)</span>
         </nav>
     </header>
+    <script src="js/script.js"></script>
+    <script> window.chtlConfig = { chatbotId: "8385398469" } </script>
+    <script async data-id="8385398469" id="chtl-script" type="text/javascript"
+        src="https://chatling.ai/js/embed.js"></script>
 
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Excelência em Suporte de Hardware</h1>
+            <p>Atendimento técnico especializado para a comunidade acadêmica do IFPB.</p>
+            <div class="hero-btns">
+                <a href="chamado.html" class="btn-hero">Abrir Chamado</a>
+                <a href="loja.html" class="btn-hero secondary">Visitar Loja</a>
+            </div>
+        </div>
+    </section>
 
     <main>
         <section class="card">
@@ -42,48 +58,45 @@
             <h2>Nossa Equipe</h2>
 
 
-            <div class="servicos">
-                <div class="servico">
+            <div class="servicos-grid">
+                <div class="servico-card">
+                    <img src="img/giovane.jpeg" alt="Giovane" class="foto-perfil">
                     <h3>Giovane</h3>
                     <p><strong>Função:</strong> Técnico em Hardware</p>
-                    <p><strong>Qualificações:</strong> Experiência em manutenção preventiva e corretiva de computadores,
-                        diagnóstico de falhas em hardware e organização de laboratórios de informática.</p>
+                    <p>Qualificações: Experiência em manutenção preventiva e corretiva de computadores, diagnóstico de
+                        falhas em hardware e organização de laboratórios de informática.</p>
                 </div>
 
-                <hr>
-
-                <div class="servico">
+                <div class="servico-card">
+                    <img src="img/isaac.jpeg" alt="Isaac" class="foto-perfil">
                     <h3>Isaac</h3>
                     <p><strong>Função:</strong> Técnico em Suporte Técnico</p>
-                    <p><strong>Qualificações:</strong> Atendimento ao usuário, instalação de sistemas operacionais,
-                        configuração de drivers e softwares institucionais.</p>
+                    <p>Qualificações: Atendimento ao usuário, instalação de sistemas operacionais, configuração de
+                        drivers e softwares institucionais.</p>
                 </div>
 
-                <hr>
-
-                <div class="servico">
+                <div class="servico-card">
+                    <img src="img/samuel.jpeg" alt="Samuel" class="foto-perfil">
                     <h3>Samuel</h3>
                     <p><strong>Função:</strong> Técnico em Redes e Hardware</p>
-                    <p><strong>Qualificações:</strong> Conhecimento em cabeamento estruturado, manutenção de
-                        computadores e suporte a equipamentos conectados à rede.</p>
+                    <p>Qualificações: Conhecimento em cabeamento estruturado, manutenção de computadores e suporte a
+                        equipamentos conectados à rede.</p>
                 </div>
 
-                <hr>
-
-                <div class="servico">
+                <div class="servico-card">
+                    <img src="img/kayo.jpeg" alt="Kaio" class="foto-perfil">
                     <h3>Kaio</h3>
                     <p><strong>Função:</strong> Técnico em Manutenção de Computadores</p>
-                    <p><strong>Qualificações:</strong> Troca de componentes, limpeza preventiva, testes de desempenho e
-                        verificação de funcionamento dos equipamentos.</p>
+                    <p>Qualificações: Troca de componentes, limpeza preventiva, testes de desempenho e verificação de
+                        funcionamento dos equipamentos.</p>
                 </div>
 
-                <hr>
-
-                <div class="servico">
+                <div class="servico-card">
+                    <img src="img/if-logo.png" alt="Camila" class="foto-perfil">
                     <h3>Camila</h3>
                     <p><strong>Função:</strong> Técnica em Suporte e Organização de TI</p>
-                    <p><strong>Qualificações:</strong> Controle de chamados, documentação de serviços realizados e apoio
-                        técnico aos usuários do IFPB.</p>
+                    <p>Qualificações: Controle de chamados, documentação de serviços realizados e apoio técnico aos
+                        usuários do IFPB.</p>
                 </div>
             </div>
         </section>
@@ -99,12 +112,15 @@
                 <li>Suporte alinhado às normas do IFPB</li>
             </ul>
         </section>
+
+
     </main>
 
 
     <footer>
         <p>© 2025 - Instituto Federal da Paraíba</p>
     </footer>
+
 </body>
 
 </html>

@@ -5,22 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abrir Chamado | IFPB</title>
-    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="./static/style.css">
 </head>
 
 <body>
     <header class="topo">
         <div class="logo-area">
             <img src="img/if-logo.png" alt="IFPB" class="logo">
-            <h1>Serviço de Hardware - IFPB</h1>
+            <h1>InfoTech IFPB</h1>
         </div>
         <nav class="menu">
             <a href="index.html">Início</a>
             <a href="servico.html">Serviços</a>
+            <a href="chamado.html">Chamado</a>
             <a href="loja.html">Loja</a>
+            <span class="carrinho">🛒 Carrinho (0)</span>
         </nav>
     </header>
 
+    <section class="hero" style="padding: 40px 20px;">
+        <div class="hero-content">
+            <h1>Abrir Chamado</h1>
+            <p>Conte-nos o seu problema e nossa equipe entrará em contato.</p>
+        </div>
+    </section>
 
     <main>
         <form class="card">
@@ -40,7 +48,8 @@
             </select>
 
             <label for="problema">Descreva o problema:</label>
-            <textarea name="problema" id="problema" rows="5" placeholder="Explique o problema encontrado" required></textarea>
+            <textarea name="problema" id="problema" rows="5" placeholder="Explique o problema encontrado"
+                required></textarea>
 
             <button type="submit">Enviar Chamado</button>
         </form>
@@ -51,6 +60,10 @@
     <footer>
         <p>© 2025 - Instituto Federal da Paraíba</p>
     </footer>
+    <script src="js/script.js"></script>
+    <script> window.chtlConfig = { chatbotId: "8385398469" } </script>
+    <script async data-id="8385398469" id="chtl-script" type="text/javascript"
+        src="https://chatling.ai/js/embed.js"></script>
 </body>
 
 </html>
