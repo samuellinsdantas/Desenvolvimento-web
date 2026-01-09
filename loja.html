@@ -39,60 +39,8 @@
         </aside>
 
         <!-- VITRINE -->
-        <section class="vitrine">
-
-            <div class="produto" data-category="hardware">
-                <span class="badge oferta">OFERTA</span>
-                <img src="img/rtx4060.png" alt="RTX 4060">
-                <h3>Placa de Vídeo RTX 4060</h3>
-                <p class="preco-antigo">R$ 3.999,00</p>
-                <p class="preco-novo">R$ 3.199,00</p>
-                <button class="add-carrinho" data-nome="Placa de Vídeo RTX 4060" data-preco="3199.00">Comprar</button>
-            </div>
-
-            <div class="produto" data-category="perifericos">
-                <span class="badge novo">NOVO</span>
-                <img src="img/ryzen5.png" alt="Ryzen 5">
-                <h3>Processador Ryzen 5 5600G</h3>
-                <p class="preco-antigo">R$ 1.299,00</p>
-                <p class="preco-novo">R$ 999,00</p>
-                <button class="add-carrinho" data-nome="Processador Ryzen 5 5600G" data-preco="999.00">Comprar</button>
-            </div>
-
-            <div class="produto" data-category="redes">
-                <img src="img/ssd.png" alt="SSD NVMe">
-                <h3>SSD NVMe 1TB</h3>
-                <p class="preco-antigo">R$ 699,00</p>
-                <p class="preco-novo">R$ 549,00</p>
-                <button class="add-carrinho" data-nome="SSD NVMe 1TB" data-preco="549.00">Comprar</button>
-            </div>
-
-            <div class="produto" data-category="hardware">
-                <span class="badge oferta">OFERTA</span>
-                <img src="img/fonte.png" alt="Fonte 650W">
-                <h3>Fonte 650W 80 Plus</h3>
-                <p class="preco-antigo">R$ 599,00</p>
-                <p class="preco-novo">R$ 449,00</p>
-                <button class="add-carrinho" data-nome="Fonte 650W 80 Plus" data-preco="449.00">Comprar</button>
-            </div>
-
-            <div class="produto" data-category="redes">
-                <img src="img/roteador.png" alt="Roteador Mesh">
-                <h3>Roteador Mesh</h3>
-                <p class="preco-antigo">R$ 899,00</p>
-                <p class="preco-novo">R$ 699,00</p>
-                <button class="add-carrinho" data-nome="Roteador Mesh" data-preco="699.00">Comprar</button>
-            </div>
-
-            <div class="produto" data-category="perifericos">
-                <span class="badge novo">NOVO</span>
-                <img src="img/teclado.png" alt="Teclado Gamer">
-                <h3>Teclado Gamer Mecânico</h3>
-                <p class="preco-antigo">R$ 499,00</p>
-                <p class="preco-novo">R$ 379,00</p>
-                <button class="add-carrinho" data-nome="Teclado Gamer Mecânico" data-preco="379.00">Comprar</button>
-            </div>
-
+        <section class="vitrine" id="vitrine-produtos">
+            <!-- Produtos serão carregados via JS -->
         </section>
     </main>
 
@@ -116,7 +64,8 @@
         </div>
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="./js/products.js"></script>
+    <script src="./js/script.js"></script>
     <script> window.chtlConfig = { chatbotId: "8385398469" } </script>
     <script async data-id="8385398469" id="chtl-script" type="text/javascript"
         src="https://chatling.ai/js/embed.js"></script>

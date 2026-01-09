@@ -8,14 +8,52 @@ document.addEventListener('DOMContentLoaded', () => {
     const cartCountElement = document.querySelector('.carrinho');
     const filterButtons = document.querySelectorAll('.filtros button[data-filter]');
     const showAllButton = document.querySelector('.btn-todos');
-    const products = document.querySelectorAll('.produto');
+    const vitrine = document.getElementById('vitrine-produtos');
+
+    function renderProducts() {
+        console.log("Iniciando renderização de produtos...");
+        if (!vitrine) {
+            console.log("Vitrine não encontrada nesta página.");
+            return;
+        }
+
+        if (typeof productsData === 'undefined') {
+            console.error("Erro: productsData não está definido! Verifique se o arquivo js/products.js foi carregado corretamente.");
+            vitrine.innerHTML = '<p style="text-align: center; color: red; padding: 20px;">Erro ao carregar produtos. Por favor, recarregue a página.</p>';
+            return;
+        }
+
+        console.log("Produtos encontrados:", productsData.length);
+        vitrine.innerHTML = '';
+        productsData.forEach(product => {
+            const productElement = document.createElement('div');
+            productElement.classList.add('produto');
+            productElement.setAttribute('data-category', product.category);
+            productElement.innerHTML = `
+                ${product.badge ? `<span class="badge ${product.badge.toLowerCase()}">${product.badge}</span>` : ''}
+                <a href="produto.html?id=${product.id}" class="produto-link">
+                    <img src="${product.image}" alt="${product.name}">
+                    <h3>${product.name}</h3>
+                </a>
+                ${product.oldPrice ? `<p class="preco-antigo">R$ ${product.oldPrice.toFixed(2).replace('.', ',')}</p>` : ''}
+                <p class="preco-novo">R$ ${product.price.toFixed(2).replace('.', ',')}</p>
+                <button class="add-carrinho" data-nome="${product.name}" data-preco="${product.price}">Comprar</button>
+            `;
+            vitrine.appendChild(productElement);
+        });
+        console.log("Renderização concluída.");
+    }
+
+    // Initial render
+    renderProducts();
+
+    // Re-select products after rendering for filtering
+    let products = document.querySelectorAll('.produto');
 
     function saveCart() {
         localStorage.setItem('cart', JSON.stringify(cart));
         updateCartUI();
     }
-
-    // --- CART LOGIC ---
 
     function updateCartUI() {
         // Update cart count in header
@@ -83,13 +121,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial UI update
     updateCartUI();
 
-    // Add to cart buttons
-    document.querySelectorAll('.add-carrinho').forEach(button => {
-        button.addEventListener('click', () => {
+    // Add to cart buttons (using event delegation for dynamic content)
+    document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('add-carrinho') || e.target.closest('.add-carrinho')) {
+            const button = e.target.classList.contains('add-carrinho') ? e.target : e.target.closest('.add-carrinho');
             const name = button.getAttribute('data-nome');
             const price = button.getAttribute('data-preco');
             addToCart(name, price);
-        });
+        }
     });
 
     // Modal controls
